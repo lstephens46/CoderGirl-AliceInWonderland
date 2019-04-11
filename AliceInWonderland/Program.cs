@@ -9,15 +9,22 @@ namespace AliceInWonderland
         public static void Main()
         {
             // TODO: Prompt the user for a string within the first sentence of Alice in Wonderland to search for within this string.
+            Console.Write("Please enter a word from the first sentence of Alice in Wonderland: ");
+            string word = Console.ReadLine();
 
             Console.ReadLine();
         }
 
         // TODO: Create a method that returns whether the text was found. See if you can make the search case-insensitive, so that searching for “alice” prints true.
+        //public static bool Match(string word)
 
         public static bool Match(string search)
         {
-            return Alice.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0;
+            
+            
+            bool alice =  Alice.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0;
+            Console.WriteLine(alice);
+            return alice;
         }
     }
 }
